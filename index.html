@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Raccourci avec Emmet " ! " + Entrée pour creer le template (mécanisme pour stocker du contenu HTML (côté client)il vérifie la validité du contenu mais n'est pas afficher lors du chargement de la page) -->
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Jeu en Javascript => Trouve le nombre">
+        <title>Jeu</title>
+        <link rel="stylesheet" href="./styles.css">
+        <!-- Penser à mettre un favicon -->
+    </head>
+    <body>
+    <!--  Étape 1 : création d'une boite container qui contiendra tout nos éléments -->
+        <div class="container">
+            <h1>Trouve le nombre !</h1>
+            <p>
+                Trouve le bon nombre entre 0 et 100. Tu as 5 essais ! 
+            </p>
+            <div class="vies">
+                <ion-icon name="heart-outline"></ion-icon>
+                <ion-icon name="heart"></ion-icon>
+            </div>
+
+            <form id="inputBox">
+                <label for="number">Entrez un nombre :</label>
+            <!-- l'ID de l'input doit être identique au for du label afin qu'il puisse communiquer entre eux -->
+            <!-- required est un attribut booléen. Il indique que l'utilisateur doit entrer une valeur afin que le formulaire soit envoyer (un message "veuillez renseigner ce champ sera signaler")-->
+                <input type="number" id="number" min="0" max="100" required>
+            <!-- Le type submit permets d'envoyer les donées d'un formulaire -->
+                <button type="submit" id="essayerBtn">
+                    Essayer
+                </button>
+                <p id="message">
+                    Lorem ipsum dolor sit amet.
+                </p>
+            <!-- Création d'un autre boutton. Ce dernier servira à rejouer -->
+                <button id="rejouer">Rejouer ?</button>
+            </form>
+            <p id="details">
+            <!-- &plusmn = +- -->
+            <!-- idées => Rajouter des espaces plus tard après chaque ";" ! -->
+                * Brûlant = &plusmn; 2 ; Chaud = &plusmn; 5 ; Tiède = &plusmn; 10 ; Froid = + de 10.
+            </p>
+        </div>
+
+
+        <script src="./app.js"></script>
+        <!-- Ajout de script ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

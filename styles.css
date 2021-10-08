@@ -1,0 +1,19 @@
+/* Variables */
+:root{
+    --title: #f8c27a; 
+    --textShadow: 0 2px 2px rgba(0,0,0.7);
+    --boxShadow: 0 0px 10px rgba(0,0,0.2);
+}
+
+/* Variable à réintégrer */
+
+/* var(--title); */
+/* var(--textShadow); */
+/* var(--boxShadow); */
+
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

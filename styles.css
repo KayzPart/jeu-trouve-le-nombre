@@ -1,19 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 /* Variables */
 :root{
     --title: #f8c27a; 
+    --h1: #ffc31d;
     --textShadow: 0 2px 2px rgba(0,0,0.7);
     --boxShadow: 0 0px 10px rgba(0,0,0.2);
+    --background-container: rgba(255, 255, 255, 0.2);
+    --icon-fill: red;
+    --background-inputBox: #96e6a1;
+    --background-button: teal;
+    --background-button-hover: rgb(0, 184, 184);
+    --color-text-button: #ffffff;
 }
-
 /* Variable à réintégrer */
 
 /* var(--title); */
-/* var(--textShadow); */
-/* var(--boxShadow); */
+/*  */
+/*  */
+
 
 /* Reset */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-size: 14px;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+/* Container */
+.container{
+    background-color: var(--background-container);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--boxShadow);
+}
+
+/* H1 */
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 15px;
+    color: var(--h1);
+    text-shadow: var(--textShadow);
+    display: inline-block;
+}
+
+/* Vies */
+.vies{
+    margin: 10px;
+}
+
+/* Icones */
+ion-icon{
+    font-size: 50px;
+    fill: var(--icon-fill);
+}
+
+/* Formulaire d'envoie (input) */
+#inputBox{
+    background-color: var(--background-inputBox);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Label du formulaire */
+#inputBox > label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, button{
+    /* outline = bordure à l'exterieur des boutton et des input*/
+    outline: none;
+    border: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+
+/* Boutton */
+button{
+    background-color: var(--background-button);
+    color: var(--color-text-button);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    background-color: var(--background-button-hover);
+}
+
+/* Paragraphe Message */
+p#message{
+    margin: 20px auto 0 auto;
+}
+
+/* Boutton rejouer */
+#rejouer{
+    display: none;
+    margin: 5px auto 0 auto;
+}
+
+/* Paragraphe chaud/froid */
+#details{
+    font-weight: bold;
+    font-size: 6px;
+    margin-top: 5px;
 }

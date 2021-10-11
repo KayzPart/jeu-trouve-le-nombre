@@ -197,7 +197,7 @@ const play = () => {
                 body.style.backgroundImage = bgChaud;
                 inputBox.style.backgroundImage = bgChaud;
                 // Ctrl + i pour ajouter un emoji
-                message.textContent = "C'est Chaud ! 🔥 ";
+                message.textContent = "C'est Chaud ! ☀️ ";
             }
             else if(randomNumber <= valeurInput + 10 && randomNumber -10){
                 body.style.backgroundImage = bgTiede;

@@ -59,15 +59,26 @@ h1{
     text-shadow: var(--textShadow);
     display: inline-block;
 }
-
+/* Niveaux */
+.niveaux button{
+ width: 20vw;
+ height: 10vh;
+ font-size: 45px;
+}
+.h{
+    font-size: 80px;
+}
 /* Vies */
 .vies{
     margin: 10px;
 }
-
+#EssaiVie{
+    font-size: 40px;
+    font-weight: bold;
+}
 /* Icones */
 ion-icon{
-    font-size: 50px;
+    font-size: 100px;
     fill: var(--icon-fill);
 }
 
@@ -83,13 +94,16 @@ ion-icon{
     display: block;
     margin-bottom: 8px;
 }
-
+.label-input{
+    font-size: 50px;
+}
 input, button{
     /* outline = bordure à l'exterieur des boutton et des input*/
     outline: none;
     border: none;
     padding: 3px 20px;
     border-radius: 5px;
+    font-size: 50px;
 }
 
 /* Boutton */
@@ -108,17 +122,125 @@ button:hover{
 /* Paragraphe Message */
 p#message{
     margin: 20px auto 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
 }
 
 /* Boutton rejouer */
 #rejouer{
     display: none;
     margin: 5px auto 0 auto;
+    height: 8vh;
 }
 
 /* Paragraphe chaud/froid */
 #details{
     font-weight: bold;
-    font-size: 6px;
+    font-size: 26px;
     margin-top: 5px;
+}
+@media screen and (max-width: 1024px) {
+    .h{
+        font-size: 50px;
+    }
+    #details{
+        font-size: 20px;
+    }
+    #EssaiVie{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    ion-icon{
+        font-size: 60px;
+    }
+    .label-input{
+        font-size: 50px;
+    }
+    form input,button{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .niveaux button{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .h{
+        font-size: 45px;
+    }
+    .label-input{
+        font-size: 25px;
+    }
+    form input,button{
+        font-size: 30px;
+    }
+    #details{
+        font-size: 15px;
+    }
+    #EssaiVie{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 576px) {
+    .h{
+        font-size: 35px;
+    }
+    .niveaux button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #EssaiVie{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .label-input{
+        font-size: 25px;
+    } 
+    form input,button{
+        font-size: 25px;
+    }
+    #details{
+        font-size: 14px;
+    }
+    ion-icon{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 375px) {
+    #details{
+        font-size: 13px;
+    }
+    ion-icon{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 360px){
+    ion-icon{
+        font-size: 40px;
+    }
+    #details{
+        font-size: 12px;
+    }
+    .h{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .niveaux button{
+        font-size: 35px;
+    }
+    form button{
+        margin-top: 10px;
+    }
+    ion-icon{
+        font-size: 30px;
+    }
+    #details{
+        font-size: 11px;
+    }
 }

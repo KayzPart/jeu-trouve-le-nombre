@@ -48,7 +48,9 @@ body{
     text-align: center;
     box-shadow: var(--boxShadow);
 }
-
+#jeu{
+    display: none;
+}
 /* H1 */
 h1{
     font-family: 'Luckiest Guy', cursive;

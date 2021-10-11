@@ -44,6 +44,16 @@ const rejouerBtn = document.getElementById('rejouer');
 const body = document.getElementsByTagName('body')[0];
 const inputBox = document.getElementById('inputBox');
 const essai = document.getElementById('EssaiVie');
+const jeu = document.getElementById('jeu');
+// console.log(jeu);
+const niveauxJeu = document.querySelectorAll('.niveauxJeu')[0];
+console.log(niveauxJeu);
+const NiveauFacile = document.querySelector('.jeuFacile');
+// console.log(NiveauFacile);
+const NiveauAvancer = document.querySelector('.jeuAvancer');
+// console.log(NiveauAvancer)
+const NiveauExpert = document.querySelector('.jeuExpert');
+// console.log(NiveauExpert)
 // getElementsByTagName renvoie une liste d'éléments. [0] selectionne le premier éléments donc le body
 
 
@@ -67,9 +77,10 @@ const bgLoose = 'linear-gradient(to right, #868f96 0%, #596164 100%)';
 
 
  //Fond d'écran pour le gagnant 
-const bgWin = ''
+const bgWin = 'linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%)';
+
 //'linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%)';
-//'linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%)';
+//
 // essayer = background-image: 
 
 
@@ -83,18 +94,41 @@ const bgWin = ''
 
 // Function PLAY :
 // Fonction fléché
-const play = () => {
 
+
+let totalVies;
+
+NiveauFacile.addEventListener('click', (e) => {
+    niveauxJeu.style.display = "none";
+    jeu.style.display = "block";
+    totalVies = 7;
+    play();
+})
+NiveauAvancer.addEventListener('click', (e) => {
+    niveauxJeu.style.display = "none";
+    jeu.style.display = "block";
+    totalVies = 5;
+    play();
+})
+NiveauExpert.addEventListener('click', (e) => {
+    niveauxJeu.style.display = "none";
+    jeu.style.display = "block";
+    totalVies = 3;
+    play();
+})
+
+     
+const play = () => {
     // Générer le nombre aléatoire
     //Math.random() fonction qui va générer un nombre aléatoire entre 0 et 1
     // Englober Math.random dans une autre fonction celle de Math.floor () qui va prednre le chiffre et l'arrondir à l'entier inférieur
     const randomNumber = Math.floor(Math.random() * 101);
 
     // Variable total de vies
-    const totalVies = 5;
+    
 
     // let vies va changer au fil du jeu
-    let vies = totalVies;
+    var vies = totalVies;
     //Vérification 
     // let vies = 4;
   
@@ -192,6 +226,8 @@ const play = () => {
         actualiseCoeurs(vies);
     })
 
+    
+
     const verifyLoose = () => {
         if(vies === 0){
             body.style.backgroundImage = bgLoose;
@@ -206,6 +242,7 @@ const play = () => {
             message.textContent = `Vous avez perdu. La réponse était ${randomNumber}`;
             // Quand on perd, boutton pour rejouer 
             rejouerBtn.style.display = "block";
+            essayerBtn.style.display = "none";
         }
     }
     const actualiseCoeurs = (vies) => {
@@ -250,6 +287,5 @@ const play = () => {
         document.location.reload(true);
     })
 }
-play();
 
 //faire évoluer le nombres d'essaie transformer le 5 en variables

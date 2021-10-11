@@ -11,35 +11,48 @@
         <!-- Penser à mettre un favicon -->
     </head>
     <body>
+        
     <!--  Étape 1 : création d'une boite container qui contiendra tout nos éléments -->
         <div class="container">
-            <h1>Trouve le nombre !</h1>
-            <p id="EssaiVie">
-                Trouve le bon nombre entre 0 et 100. Tu as 5 essais ! 
-            </p>
-            <div class="vies">
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="heart"></ion-icon>
+            
+            
+            <div class="niveauxJeu">
+                <h1>Choisis ton niveau !</h1>
+                <div class="niveaux">
+                    <button  type="button" class="jeuFacile">Facile</button>
+                    <button type="button"  class="jeuAvancer">Avancé</button>
+                    <button type="button"  class="jeuExpert">Expert</button>
+                </div>
             </div>
+            <div id="jeu">
+                <h1>Trouve le nombre !</h1>
+                <p id="EssaiVie">
+                    Trouve le bon nombre entre 0 et 100. Tu as 5 essais ! 
+                </p>
+                <div class="vies">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name="heart"></ion-icon>
+                </div>
 
-            <form id="inputBox">
-                <label for="number">Entrez un nombre :</label>
-            <!-- l'ID de l'input doit être identique au for du label afin qu'il puisse communiquer entre eux -->
-            <!-- required est un attribut booléen. Il indique que l'utilisateur doit entrer une valeur afin que le formulaire soit envoyer (un message "veuillez renseigner ce champ sera signaler")-->
-                <input type="number" id="number" min="0" max="100" required>
-            <!-- Le type submit permets d'envoyer les donées d'un formulaire -->
-                <button type="submit" id="essayerBtn">
-                    Essayer
-                </button>
-                <p id="message"></p>
-            <!-- Création d'un autre boutton. Ce dernier servira à rejouer -->
-                <button id="rejouer">Rejouer ?</button>
-            </form>
-            <p id="details">
-            <!-- &plusmn = +- -->
-            <!-- idées => Rajouter des espaces plus tard après chaque ";" ! -->
-                * Brûlant = &plusmn; 2 ; Chaud = &plusmn; 5 ; Tiède = &plusmn; 10 ; Froid = + de 10.
-            </p>
+                <form id="inputBox">
+                    <label for="number">Entrez un nombre :</label>
+                <!-- l'ID de l'input doit être identique au for du label afin qu'il puisse communiquer entre eux -->
+                <!-- required est un attribut booléen. Il indique que l'utilisateur doit entrer une valeur afin que le formulaire soit envoyer (un message "veuillez renseigner ce champ sera signaler")-->
+                    <input type="number" id="number" min="0" max="100" required>
+                <!-- Le type submit permets d'envoyer les donées d'un formulaire -->
+                    <button type="submit" id="essayerBtn">
+                        Essayer
+                    </button>
+                    <p id="message"></p>
+                <!-- Création d'un autre boutton. Ce dernier servira à rejouer -->
+                    <button id="rejouer">Rejouer ?</button>
+                </form>
+                <p id="details">
+                <!-- &plusmn = +- -->
+                <!-- idées => Rajouter des espaces plus tard après chaque ";" ! -->
+                    * Brûlant = &plusmn; 2 ; Chaud = &plusmn; 5 ; Tiède = &plusmn; 10 ; Froid = + de 10.
+                </p>
+            </div>
         </div>
 
 
